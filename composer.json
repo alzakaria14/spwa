@@ -1,0 +1,16 @@
+{
+    "name": "spwa/alzakaria",
+    "description": "Single Page Web Application by Al Zakaria Framework library PHPHP,With Javascript-jQuery",
+    "type": "library",
+    "require": {
+        "ramsey/uuid": "^4.7"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "alzakaria",
+            "email": "alzakaria@ruangkarya.id"
+        }
+    ],
+    "minimum-stability": "stable"
+}
