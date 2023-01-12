@@ -25,6 +25,8 @@
     <!-- DataTable -->
     <link rel="stylesheet" href="assets/vendor/datatable/css/jquery.dataTables.min.css">
     <script src="assets/vendor/datatable/js/jquery.dataTables.min.js"></script>
+     <!-- Lottie Player -->
+    <script src="assets/vendor/lottie-player/lottie-player.js"></script>
     <!-- CSS Main Costom -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
