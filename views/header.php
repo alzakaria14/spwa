@@ -32,3 +32,5 @@
 </head>
 
 <?= '<body>' ?>
+    
+<div id="loader"></div>
