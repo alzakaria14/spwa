@@ -14,6 +14,8 @@ function loaderOff() {
     loader.html('');
 }
 
+
+//rupiah on span function
 function toRupiah() {
     $("span[id=rupiah]").each(function () {
         var angka = $(this).text();
