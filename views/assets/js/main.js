@@ -26,6 +26,18 @@ function toRupiah() {
     });
 }
 
+//indonesian date function
+function idnDate() {
+    var bulan = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    $("span[id=idn-date]").each(function() {
+        var tanggal = $(this).text();
+        var tanggal_arr = tanggal.split(" ");
+        var date_arr = tanggal_arr[0].split("-");
+        var waktu = tanggal_arr[1];
+        $(this).text(date_arr[2] + "-" + bulan[date_arr[1]-1] + "-" + date_arr[0] + " " + waktu);
+    });
+}
+
 function logout() {
     document.cookie = 'id_login' + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
     document.cookie = 'token' + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
