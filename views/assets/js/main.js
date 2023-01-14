@@ -25,3 +25,18 @@ function toRupiah() {
         $(this).text('Rp' + rupiah.split('', rupiah.length - 1).reverse().join(''));
     });
 }
+
+function logout() {
+    document.cookie = 'id_login' + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+    document.cookie = 'token' + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+    document.cookie = 'level' + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+    Swal.fire({
+        icon: 'success',
+        title: 'Sukses',
+        text: 'Berhasil logout!'
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        window.location.href = 'login.php';
+    })
+
+}
