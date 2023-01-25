@@ -23,7 +23,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/img/icon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <title>Manajemen Administrasi</title>
+    <title>Nama App</title>
     <!-- Jquery -->
     <script src="assets/vendor/jquery-3.6.3/jquery-3.6.3.min.js"></script>
     <!-- Bootsrap 5.3 CSS -->
@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="assets/vendor/datatable/css/jquery.dataTables.min.css">
     <script src="assets/vendor/datatable/js/jquery.dataTables.min.js"></script>
     <!-- Lottie Player -->
-    <script src="assets/vendor/lottie/lottie-player.js"></script>
+    <script src="assets/vendor/lottie-player/lottie-player.js"></script>
     <!-- CSS Main Costom -->
     <link rel="stylesheet" href="assets/css/login.css">
 </head>
