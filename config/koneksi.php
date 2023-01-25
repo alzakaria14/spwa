@@ -2,7 +2,7 @@
 
 //--Konfigurasi dan koneksi database
 
-date_default_timezone_set('Asia/Maksassar');
+date_default_timezone_set('Asia/Makassar');
 
 //default setting untuk localhost
 $host = 'localhost';
