@@ -13,19 +13,17 @@ function generate_otp($n)
 
 function convert_phone_number($phoneNumber)
 {
+    $phoneNumber = str_replace(' ','',$phoneNumber);
+    $phoneNumber = str_replace('-','',$phoneNumber);
 
-    $phoneNumber = preg_replace('/[^0-9-\s]/', '', $phoneNumber);
-
-    $phoneNumber = str_replace(array(' ', '-'), '', $phoneNumber);
-
-    if (substr($phoneNumber, 0, 1) === '0') {
-        $phoneNumber = substr($phoneNumber, 1);
+    if(substr($phoneNumber,0,1) === '+'){
+        $phoneNumber = substr($phoneNumber,1);
+    }else if(substr($phoneNumber,0,1) === '0'){
+        $phoneNumber = '62'.substr($phoneNumber,1);
     }
-
-    $phoneNumber = '62' . $phoneNumber;
-
     return $phoneNumber;
 }
+
 
 function random_string($length)
 {
