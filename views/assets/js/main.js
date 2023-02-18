@@ -52,3 +52,17 @@ function logout() {
     })
 
 }
+
+function convertPhoneNumber(phoneNumber) {
+    phoneNumber = phoneNumber.replace(/\s+/g, '');
+    phoneNumber = phoneNumber.replace(/-/g, '');
+
+    if (phoneNumber.charAt(0) === '+') {
+        phoneNumber = phoneNumber.substring(1);
+    } else if (phoneNumber.charAt(0) === '0') {
+        phoneNumber = '62' + phoneNumber.substring(1);
+    }
+
+    return phoneNumber;
+}
+
