@@ -37,3 +37,9 @@ function random_string($length)
 
     return $random_string;
 }
+
+function hash_password($password){
+    global $salt;
+    $password = $salt.$password.$salt;
+    return hash('sha256',$password);
+}
