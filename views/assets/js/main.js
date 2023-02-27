@@ -66,3 +66,11 @@ function convertPhoneNumber(phoneNumber) {
     return phoneNumber;
 }
 
+function formatTel() {
+    $('span[id=tel]').each(function () {
+        let nomorTelepon = $(this).text();
+        nomorTelepon = '+' + nomorTelepon;
+        nomorTelepon = nomorTelepon.substring(0, 3) + ' ' + nomorTelepon.substring(3, 6) + ' ' + nomorTelepon.substring(6, 10) + ' ' + nomorTelepon.substring(10);
+        $(this).text(nomorTelepon);
+    });
+}
