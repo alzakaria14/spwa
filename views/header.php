@@ -41,7 +41,7 @@
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body px-0">
-        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start mx-3" id="menu">
             <li class="nav-item">
                 <a href="#" class="nav-link text-truncate">
                     <i class="fs-3 bi-house"></i><span class="ms-1 d-none d-sm-inline">Home</span>
