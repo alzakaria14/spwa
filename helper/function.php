@@ -43,3 +43,26 @@ function hash_password($password){
     $password = $salt.$password.$salt;
     return hash('sha256',$password);
 }
+
+function range_date($startDate, $endDate)
+{
+	$start = new DateTime($startDate);
+	$end = new DateTime($endDate);
+
+	$startDay = $start->format('j');
+	$startMonth = strftime('%B', $start->getTimestamp());
+	$startYear = $start->format('Y');
+
+	$endDay = $end->format('j');
+	$endMonth = strftime('%B', $end->getTimestamp());
+	$endYear = $end->format('Y');
+
+	if ($startYear === $endYear && $startMonth === $endMonth) {
+		return "$startDay - $endDay $startMonth $startYear";
+	} else if ($startYear === $endYear) {
+		return "$startDay $startMonth - $endDay $endMonth $startYear";
+	} else {
+		return "$startDay $startMonth $startYear - $endDay $endMonth $endYear";
+	}
+}
+
