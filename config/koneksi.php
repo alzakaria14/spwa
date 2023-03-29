@@ -17,7 +17,7 @@ $koneksi = mysqli_connect($host,$user,$password,$database);
 //JIKA SALT DIRUBAH MAKA SELURUH PASSWORD USER AKAN GAGAL DAN SALAH!
 //ARTINYA USER TIDAK BISA LOGIN!
 $salt = 'EtV&4dTVTZQmi$tQK4t90O&M4JkRwOq92$Iu8eThDfZ3F8tIu7';
-$is_created = date('Y-m-d H:i:s');
+$created_at = date('Y-m-d H:i:s');
 
 //base-url
 function base_url($path){
