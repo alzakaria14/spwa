@@ -1,4 +1,21 @@
-//PURE JS jQuery
+//lazy image
+function lazyImage() {
+    var lazyImages = $('img[data-src]');
+    lazyImages.each(function () {
+        var lazyImage = $(this);
+        var lazyImageObserver = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    lazyImage.attr('src', lazyImage.data('src'));
+                    lazyImage.removeClass('lazy');
+                    lazyImageObserver.unobserve(lazyImage[0]);
+                }
+            });
+        });
+
+        lazyImageObserver.observe(lazyImage[0]);
+    });
+}
 
 //preloader assets for loader
 var preloader = '<div class="loader-div"><lottie-player src="assets/img/animation/preloader.json" background="transparent"  speed="1"  style="width: 300px; height: 300px;" loop autoplay></lottie-player></div>';
