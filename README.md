@@ -1,5 +1,5 @@
 # spwa
-Singpe Page Web Application
+Single Page Web Application
 
 Neat folder structure for developing web applications in just one page.
 
