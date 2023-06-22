@@ -91,3 +91,19 @@ function formatTel() {
         $(this).text(nomorTelepon);
     });
 }
+
+function openPage(page) {
+    loaderOn();
+    let url = 'main/' + page + '.php';
+    // alert(url);
+    $.ajax({
+        url: url,
+        method: 'POST',
+        success: function (response) {
+            setTimeout(() => {
+                loaderOff()
+                main.html(response);
+            }, 1000);
+        }
+    })
+}
