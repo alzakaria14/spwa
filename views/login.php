@@ -74,4 +74,12 @@
         <script src="assets/js/main.js"></script>
     </footer>
 </body>
-<?php ?>
+<script>
+    $(document).ready(function() {
+        $(document).on("keypress", function(e) {
+            if (e.which === 13) { // Check if the pressed key is ENTER
+                login();
+            }
+        });
+    });
+</script>
