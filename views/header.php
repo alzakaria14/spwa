@@ -11,8 +11,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icon/favicon-16x16.png">
     <link rel="manifest" href="assets/img/icon/site.webmanifest">
     <title>Nama Apps</title>
-    <!-- Jquery -->
-    <script src="assets/vendor/jquery-3.6.3/jquery-3.6.3.min.js"></script>
+    <!-- jquery -->
+    <link rel="stylesheet" href="assets/vendor/jquery/jquery-ui.css">
+    <script src="assets/vendor/jquery/jquery-3.6.3.min.js"></script>
+    <script src="assets/vendor/jquery/jquery-ui.js"></script>
     <!-- Bootsrap 5.3 CSS -->
     <link rel="stylesheet" href="assets/vendor/bootsrap-5.3/css/bootstrap.min.css">
     <!-- Sweet Alert JS -->
