@@ -35,12 +35,24 @@ function loaderOff() {
 //rupiah on span function
 function toRupiah() {
     $("span[id=rupiah]").each(function () {
-        var angka = $(this).text();
-        var rupiah = '';
-        var angkarev = angka.toString().split('').reverse().join('');
-        for (var i = 0; i < angkarev.length; i++) if (i % 3 == 0) rupiah += angkarev.substr(i, 3) + '.';
-        $(this).text('Rp' + rupiah.split('', rupiah.length - 1).reverse().join(''));
+        var angka = parseFloat($(this).val());
+        $(this).text(formatRupiah(angka));
     });
+}
+
+// format rupiah
+function formatRupiah(number) {
+    if (typeof number !== "number") {
+        return "Invalid input, please provide a number.";
+    }
+
+    const formatter = new Intl.NumberFormat("id-ID", {
+        style: "currency",
+        currency: "IDR",
+        minimumFractionDigits: 0,
+    });
+
+    return formatter.format(number);
 }
 
 //indonesian date function
