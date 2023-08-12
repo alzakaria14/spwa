@@ -108,12 +108,13 @@ function terbilang($nilai)
     return $hasil;
 }
 
-function send_meeesage_telegram($chatId, $message, $botToken)
+function send_meeesage_telegram($chat_id, $message)
 {
-    $url = "https://api.telegram.org/bot$botToken/sendMessage";
+    global $bot_token;
+    $url = "https://api.telegram.org/bot$bot_token/sendMessage";
 
     $data = array(
-        'chat_id' => $chatId,
+        'chat_id' => $chat_id,
         'text' => $message
     );
 
@@ -129,5 +130,36 @@ function send_meeesage_telegram($chatId, $message, $botToken)
     $result = file_get_contents($url, false, $context);
 
     return $result;
+}
+function send_text($number, $text)
+{
+    global $whatsapp_key
+    $data = [
+        'api_key' => $whatsapp_key,
+        'sender' => $whatsapp->number,
+        'number' => $number,
+        'message' => $text
+    ];
+    $curl = curl_init();
+
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://wa.ruangkarya.id/send-message',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS => json_encode($data),
+        CURLOPT_HTTPHEADER => array(
+            'Content-Type: application/json'
+        ),
+    ));
+
+    $response = curl_exec($curl);
+
+    curl_close($curl);
+    return $response;
 }
 
